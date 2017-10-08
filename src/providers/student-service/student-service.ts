@@ -3,7 +3,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { StudentSummary } from '../../app/model/models';
+import { StudentCard } from '../../app/model/models';
 
 
 
@@ -22,13 +22,13 @@ export class StudentService {
 
  public getStudentsSummary()
   {
-    var studentASummary = new StudentSummary("/assets/img/STUDENT-A", "STUDENT-A", "4 CLASSES");
-    var studentBSummary = new StudentSummary("/assets/img/STUDENT-B", "STUDENT-B", "2 CLASSES");
-    var studentCSummary = new StudentSummary("/assets/img/STUDENT-C", "STUDENT-C", "1 CLASSES");
-    var studentDSummary = new StudentSummary("/assets/img/STUDENT-D", "STUDENT-D", "5 CLASSES");
+    var studentASummary = new StudentCard("/assets/img/STUDENT-A.jpg", "STUDENT-A", "4 CLASSES");
+    var studentBSummary = new StudentCard("/assets/img/STUDENT-B.jpg", "STUDENT-B", "2 CLASSES");
+    var studentCSummary = new StudentCard("/assets/img/STUDENT-C.jpg", "STUDENT-C", "1 CLASSES");
+    var studentDSummary = new StudentCard("/assets/img/STUDENT-D.jpg", "STUDENT-D", "5 CLASSES");
 
- 
-    var studentSummaryList:StudentSummary[] = 
+
+    var studentSummaryList:StudentCard[] =
     [
       studentASummary, studentBSummary, studentCSummary, studentDSummary
     ];

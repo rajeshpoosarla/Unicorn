@@ -1,1 +1,1 @@
-export { StudentSummary } from '../model/studentSummary/StudentSummary';
+export { StudentCard } from '../model/studentCard/studentCard';

@@ -10,7 +10,7 @@ import { StudentSummary } from '../../app/model/models';
 export class HomePage {
   studentSummaryList: StudentSummary[];
 
-  public constructor(public navCtrl: NavController, public studentService : StudentService) {    
+  public constructor(public navCtrl: NavController, public studentService : StudentService) {
   }
 
   ionViewDidLoad(){
@@ -19,6 +19,8 @@ export class HomePage {
 
   public getStudentSummary()
   {
+    console.log("getting student summary list")
     this.studentSummaryList = this.studentService.getStudentsSummary();
+    console.log(this.studentSummaryList.length);
   }
 }

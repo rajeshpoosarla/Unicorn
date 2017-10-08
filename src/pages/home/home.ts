@@ -10,7 +10,11 @@ import { StudentSummary } from '../../app/model/models';
 export class HomePage {
   studentSummaryList: StudentSummary[];
 
+<<<<<<< HEAD
   public constructor(public navCtrl: NavController, public studentService : StudentService) {
+=======
+  public constructor(public navCtrl: NavController, public studentService : StudentService) {    
+>>>>>>> 4efe88bce583150037f80e9e50b06210ef09a4ea
   }
 
   ionViewDidLoad(){
@@ -19,8 +23,12 @@ export class HomePage {
 
   public getStudentSummary()
   {
+<<<<<<< HEAD
     console.log("getting student summary list")
     this.studentSummaryList = this.studentService.getStudentsSummary();
     console.log(this.studentSummaryList.length);
+=======
+    this.studentSummaryList = this.studentService.getStudentsSummary();
+>>>>>>> 4efe88bce583150037f80e9e50b06210ef09a4ea
   }
 }

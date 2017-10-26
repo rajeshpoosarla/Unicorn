@@ -6,9 +6,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/pages';
+import { RegisterPage } from './../pages/register/register';
 import { TabsPage } from '../pages/pages';
 import { StudentService } from '../providers/providers';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -22,18 +24,21 @@ AppModule = __decorate([
     NgModule({
         declarations: [
             MyApp,
+            TabsPage,
             HomePage,
-            TabsPage
+            RegisterPage
         ],
         imports: [
             BrowserModule,
+            HttpModule,
             IonicModule.forRoot(MyApp)
         ],
         bootstrap: [IonicApp],
         entryComponents: [
             MyApp,
+            TabsPage,
             HomePage,
-            TabsPage
+            RegisterPage
         ],
         providers: [
             StatusBar,

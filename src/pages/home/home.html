@@ -4,19 +4,36 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content class='card-background-page'>
-    <!-- <ion-list>
-        <ion-card>
-            <img src="/assets/img/STUDENT-A.jpg" />
-            <div class="card-title">asdf</div>
-            <div class="card-subtitle"> asdfdsfdsf</div>
-        </ion-card>
-    </ion-list> -->
+<ion-content class='cards-bg'>
     <ion-list>
-        <ion-card *ngFor="let studentSummary of studentSummaryList">
-            <img src="{{ studentSummary.ImageId}}" />
-            <div class="card-title"> {{ studentSummary.Name }}</div>
-            <div class="card-subtitle"> {{ studentSummary.Description }}</div>
+        <ion-card *ngFor="let studentCard of studentCardList">
+            <img src="{{ studentCard.ImageId }}" />
+            <ion-card-content>
+                <ion-card-title>
+                    {{ studentCard.Name }}
+                </ion-card-title>
+                <p>
+                    {{ studentCard.Description }}
+                </p>
+                <p>
+                    {{ studentCard.Schedule }}
+                </p>
+            </ion-card-content>
+
+            <ion-row no-padding>
+                <ion-col>
+                    <ion-item>
+                        <ion-label>Attended</ion-label>
+                        <ion-toggle color="secondary" checked="true"></ion-toggle>
+                    </ion-item>
+                </ion-col>
+                <ion-col text-center>
+                    <button ion-button clear small color="secondary" icon-start>
+                    <ion-icon name='contact'></ion-icon>
+                    Edit
+                  </button>
+                </ion-col>
+            </ion-row>
         </ion-card>
     </ion-list>
 </ion-content>

@@ -12,10 +12,17 @@ page-home {
             font-weight: bold;
             color: #fff;
         }
-        .card-subtitle {
-            font-size: 1.0em;
+        .card-schedule {
+            font-size: 2.0em;
             position: absolute;
-            top: 52%;
+            top: 46%;
+            width: 100%;
+            color: #fff;
+        }
+        .card-subtitle {
+            font-size: 2.0em;
+            position: absolute;
+            top: 56%;
             width: 100%;
             color: #fff;
         }

@@ -1,1 +1,0 @@
-export { StudentSummary } from '../model/studentSummary/StudentSummary';

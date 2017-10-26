@@ -15,8 +15,16 @@ var HomePage = (function () {
         this.navCtrl = navCtrl;
         this.studentService = studentService;
     }
+    HomePage.prototype.ionViewDidLoad = function () {
+        this.getStudentSummary();
+    };
     HomePage.prototype.getStudentSummary = function () {
-        this.studentsSummary = this.studentService.getStudentsSummary();
+        console.log("getting student summary list");
+        this.studentCardList = this.studentService.getStudentsSummary();
+        console.log(this.studentCardList.length);
+        this.studentCardList.forEach(function (element) {
+            console.log("ImageId:" + element.ImageId);
+        });
     };
     return HomePage;
 }());

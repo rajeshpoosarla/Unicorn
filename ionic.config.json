@@ -1,6 +1,6 @@
 {
-  "name": "unicorn",
-  "app_id": "",
-  "type": "ionic-angular",
-  "integrations": {}
+    "name": "unicorn",
+    "app_id": "com.sri.unicorn",
+    "type": "ionic-angular",
+    "integrations": {}
 }

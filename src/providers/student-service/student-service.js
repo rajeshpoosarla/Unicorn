@@ -8,11 +8,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import { StudentSummary } from '../../app/model/models';
+import { StudentCard } from '../../model/models';
 /*
   Generated class for the StudentServiceProvider provider.
 
@@ -20,25 +19,24 @@ import { StudentSummary } from '../../app/model/models';
   and Angular DI.
 */
 var StudentService = (function () {
-    function StudentService(http) {
-        this.http = http;
+    function StudentService() {
         console.log('Starting StudentService');
     }
     StudentService.prototype.getStudentsSummary = function () {
-        var studentASummary = new StudentSummary("STUDENT-A", "STUDENT-A", "4 CLASSES");
-        var studentBSummary = new StudentSummary("STUDENT-B", "STUDENT-B", "2 CLASSES");
-        var studentCSummary = new StudentSummary("STUDENT-C", "STUDENT-C", "1 CLASSES");
-        var studentDSummary = new StudentSummary("STUDENT-D", "STUDENT-D", "5 CLASSES");
-        var studentSummaryList = {
-            studentASummary: studentASummary, studentBSummary: studentBSummary, studentCSummary: studentCSummary, studentDSummary: studentDSummary
-        };
+        var studentASummary = new StudentCard("/assets/img/STUDENT-A.jpg", "STUDENT-A", "4 CLASSES", "8:00 am - 9:00 am");
+        var studentBSummary = new StudentCard("/assets/img/STUDENT-B.jpg", "STUDENT-B", "2 CLASSES", "9:00 am - 10:00 am");
+        var studentCSummary = new StudentCard("/assets/img/STUDENT-C.jpg", "STUDENT-C", "1 CLASSES", "10:00 am - 11:00 am");
+        var studentDSummary = new StudentCard("/assets/img/STUDENT-D.jpg", "STUDENT-D", "5 CLASSES", "11:00 am - 12:00");
+        var studentSummaryList = [
+            studentASummary, studentBSummary, studentCSummary, studentDSummary
+        ];
         return studentSummaryList;
     };
     return StudentService;
 }());
 StudentService = __decorate([
     Injectable(),
-    __metadata("design:paramtypes", [Http])
+    __metadata("design:paramtypes", [])
 ], StudentService);
 export { StudentService };
 //# sourceMappingURL=student-service.js.map

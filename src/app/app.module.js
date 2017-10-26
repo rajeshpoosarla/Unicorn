@@ -10,6 +10,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/pages';
+import { RegisterPage } from './../pages/register/register';
 import { TabsPage } from '../pages/pages';
 import { StudentService } from '../providers/providers';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -23,8 +24,9 @@ AppModule = __decorate([
     NgModule({
         declarations: [
             MyApp,
+            TabsPage,
             HomePage,
-            TabsPage
+            RegisterPage
         ],
         imports: [
             BrowserModule,
@@ -34,8 +36,9 @@ AppModule = __decorate([
         bootstrap: [IonicApp],
         entryComponents: [
             MyApp,
+            TabsPage,
             HomePage,
-            TabsPage
+            RegisterPage
         ],
         providers: [
             StatusBar,

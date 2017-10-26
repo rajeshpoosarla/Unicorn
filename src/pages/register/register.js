@@ -8,22 +8,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-import { HomePage } from '../home/home';
-import { RegisterPage } from './../register/register';
-var TabsPage = (function () {
-    function TabsPage() {
-        this.homeTab = HomePage;
-        this.registerTab = RegisterPage;
-        this.registerTab = RegisterPage;
-        this.homeTab = HomePage;
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+/**
+ * Generated class for the RegisterPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var RegisterPage = (function () {
+    function RegisterPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
     }
-    return TabsPage;
+    RegisterPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad RegisterPage');
+    };
+    return RegisterPage;
 }());
-TabsPage = __decorate([
+RegisterPage = __decorate([
+    IonicPage(),
     Component({
-        templateUrl: 'tabs.html'
+        selector: 'page-register',
+        templateUrl: 'register.html',
     }),
-    __metadata("design:paramtypes", [])
-], TabsPage);
-export { TabsPage };
-//# sourceMappingURL=tabs.js.map
+    __metadata("design:paramtypes", [NavController, NavParams])
+], RegisterPage);
+export { RegisterPage };
+//# sourceMappingURL=register.js.map

@@ -11,7 +11,7 @@ import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import { StudentCard } from '../../app/model/models';
+import { StudentCard } from '../../model/models';
 /*
   Generated class for the StudentServiceProvider provider.
 
@@ -23,10 +23,10 @@ var StudentService = (function () {
         console.log('Starting StudentService');
     }
     StudentService.prototype.getStudentsSummary = function () {
-        var studentASummary = new StudentCard("/assets/img/STUDENT-A.jpg", "STUDENT-A", "4 CLASSES");
-        var studentBSummary = new StudentCard("/assets/img/STUDENT-B.jpg", "STUDENT-B", "2 CLASSES");
-        var studentCSummary = new StudentCard("/assets/img/STUDENT-C.jpg", "STUDENT-C", "1 CLASSES");
-        var studentDSummary = new StudentCard("/assets/img/STUDENT-D.jpg", "STUDENT-D", "5 CLASSES");
+        var studentASummary = new StudentCard("/assets/img/STUDENT-A.jpg", "STUDENT-A", "4 CLASSES", "8:00 am - 9:00 am");
+        var studentBSummary = new StudentCard("/assets/img/STUDENT-B.jpg", "STUDENT-B", "2 CLASSES", "9:00 am - 10:00 am");
+        var studentCSummary = new StudentCard("/assets/img/STUDENT-C.jpg", "STUDENT-C", "1 CLASSES", "10:00 am - 11:00 am");
+        var studentDSummary = new StudentCard("/assets/img/STUDENT-D.jpg", "STUDENT-D", "5 CLASSES", "11:00 am - 12:00");
         var studentSummaryList = [
             studentASummary, studentBSummary, studentCSummary, studentDSummary
         ];

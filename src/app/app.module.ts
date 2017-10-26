@@ -1,3 +1,4 @@
+import { RegisterService } from './../providers/register-service/register-service';
 import { NgModule, ErrorHandler } from '@angular/core';
 
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -8,6 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/pages';
+import { RegisterPage } from './../pages/register/register';
 import { TabsPage } from '../pages/pages';
 
 import { StudentService } from '../providers/providers';
@@ -16,11 +18,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 
+
 @NgModule({
   declarations: [
     MyApp,
+    TabsPage,
     HomePage,
-    TabsPage
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -30,14 +34,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    TabsPage,
     HomePage,
-    TabsPage
+   RegisterPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    StudentService
+    StudentService,
+    RegisterService
   ]
 })
 export class AppModule {}

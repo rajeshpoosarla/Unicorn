@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { StudentService } from '../../providers/providers';
-import { StudentCard } from '../../app/model/models';
+import { StudentCard } from '../../model/models';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  studentSummaryList: StudentCard[];
+  studentCardList: StudentCard[];
 
   public constructor(public navCtrl: NavController, public studentService : StudentService) {
   }
@@ -20,10 +20,10 @@ export class HomePage {
   public getStudentSummary()
   {
     console.log("getting student summary list")
-    this.studentSummaryList = this.studentService.getStudentsSummary();
-    console.log(this.studentSummaryList.length);
+    this.studentCardList = this.studentService.getStudentsSummary();
+    console.log(this.studentCardList.length);
 
-    this.studentSummaryList.forEach(element => {
+    this.studentCardList.forEach(element => {
       console.log("ImageId:" + element.ImageId);
     });
   }

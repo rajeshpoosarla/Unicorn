@@ -20,9 +20,9 @@ var HomePage = (function () {
     };
     HomePage.prototype.getStudentSummary = function () {
         console.log("getting student summary list");
-        this.studentSummaryList = this.studentService.getStudentsSummary();
-        console.log(this.studentSummaryList.length);
-        this.studentSummaryList.forEach(function (element) {
+        this.studentCardList = this.studentService.getStudentsSummary();
+        console.log(this.studentCardList.length);
+        this.studentCardList.forEach(function (element) {
             console.log("ImageId:" + element.ImageId);
         });
     };

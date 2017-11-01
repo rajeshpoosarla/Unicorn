@@ -17,6 +17,10 @@ export class RegisterService {
   }
 
   public enroll(student: Student): void{
-    console.log('Registering student: ' + student.FirstName);
+    console.log('Registering student '
+    + ' : ' + student.FirstName
+    + ' : ' + student.LastName
+    + ' : ' + student.DateofBirth
+    + ' : ' + student.MobileNumber);
   }
 }

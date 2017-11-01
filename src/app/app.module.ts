@@ -16,8 +16,7 @@ import { StudentService } from '../providers/providers';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-
+import { AttendenceService } from '../providers/providers'
 
 @NgModule({
   declarations: [
@@ -43,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     StudentService,
-    RegisterService
+    RegisterService,
+    AttendenceService
   ]
 })
 export class AppModule {}

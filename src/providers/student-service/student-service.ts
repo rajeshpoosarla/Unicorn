@@ -1,3 +1,4 @@
+import { CAMERA_SHY } from './../../utilities/constants';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
@@ -22,11 +23,10 @@ export class StudentService {
 
  public getStudentsSummary()
   {
-    var studentASummary = new StudentCard("/assets/img/STUDENT-A.jpg", "STUDENT-A", "4 CLASSES", "8:00 am - 9:00 am");
-    var studentBSummary = new StudentCard("/assets/img/STUDENT-B.jpg", "STUDENT-B", "2 CLASSES", "9:00 am - 10:00 am");
-    var studentCSummary = new StudentCard("/assets/img/STUDENT-C.jpg", "STUDENT-C", "1 CLASSES", "10:00 am - 11:00 am");
-    var studentDSummary = new StudentCard("/assets/img/STUDENT-D.jpg", "STUDENT-D", "5 CLASSES", "11:00 am - 12:00");
-
+    var studentASummary = new StudentCard(this.CreateStudentImage(CAMERA_SHY), "STUDENT-A", "4 CLASSES", "8:00 am - 9:00 am");
+    var studentBSummary = new StudentCard(this.CreateStudentImage(CAMERA_SHY), "STUDENT-B", "2 CLASSES", "9:00 am - 10:00 am");
+    var studentCSummary = new StudentCard(this.CreateStudentImage(CAMERA_SHY), "STUDENT-C", "1 CLASSES", "10:00 am - 11:00 am");
+    var studentDSummary = new StudentCard(this.CreateStudentImage(CAMERA_SHY), "STUDENT-D", "5 CLASSES", "11:00 am - 12:00");
 
     var studentSummaryList:StudentCard[] =
     [
@@ -35,4 +35,16 @@ export class StudentService {
 
     return studentSummaryList;
   }
+
+  private CreateStudentImage(rawImage: string)
+  {
+    if (rawImage == CAMERA_SHY)
+    {
+      console.log('showing camera shy image');
+      return "/assets/icon/unicorn.ico";
+    }
+
+    return "/assets/img/STUDENT-A.JPG"
+  }
+
 }

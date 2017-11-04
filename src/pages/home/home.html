@@ -9,24 +9,27 @@
         <ion-card *ngFor="let studentCard of studentCardList">
             <ion-card-content>
                 <ion-card-title>
-                    {{ studentCard.Name }}
+                    <p>
+                        {{ studentCard.Name }}
+                    </p>
+                    <p>
+                        {{ studentCard.Description }}
+                    </p>
                 </ion-card-title>
 
                 <ion-grid>
                     <ion-row>
                         <ion-col>
-                            <p>
-                                {{ studentCard.Description }}
-                            </p>
-                            <p>
-                                {{ studentCard.Schedule }}
-                            </p>
-                            <p>
-                                <ion-item>
-                                    <ion-label>Attended</ion-label>
-                                    <ion-toggle color="secondary" checked="true"></ion-toggle>
+                            <ion-list radio-group>
+                                <ion-list-header>
+                                    {{ studentCard.Schedule.Slot }}
+                                </ion-list-header>
+
+                                <ion-item *ngFor="let option of studentCard.Schedule.Options">
+                                    <ion-label>{{option}}</ion-label>
+                                    <ion-radio (ionSelect)="OnAttendenceResponded()" checked="option == studentCard.Schedule.AttendenceOption" value="studentCard.Schedule.AttendenceOption">{{option}}</ion-radio>
                                 </ion-item>
-                            </p>
+                            </ion-list>
                         </ion-col>
                         <ion-col>
                             <p>

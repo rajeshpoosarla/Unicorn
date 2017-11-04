@@ -1,4 +1,4 @@
-import { RegisterService } from './../providers/register-service/register-service';
+
 import { NgModule, ErrorHandler } from '@angular/core';
 
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -16,7 +16,10 @@ import { StudentService } from '../providers/providers';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 import { AttendenceService } from '../providers/providers'
+import { RegisterService } from '../providers/providers';
+
 
 @NgModule({
   declarations: [

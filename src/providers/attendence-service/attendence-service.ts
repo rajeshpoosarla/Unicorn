@@ -15,4 +15,12 @@ export class AttendenceService {
     console.log('Hello AttendenceProvider Provider');
   }
 
+public HandleStudentAttendence()
+{
+  // if attended update the status in db
+
+  // if did not attend update the status in db
+  // then send sms to the parent
+}
+
 }
